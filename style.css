@@ -1,0 +1,352 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgb(1, 199, 248);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4a89dc;
+}
+
+/* Hero Section */
+/* Hero Section - Adjust this part */
+#hero {
+    
+    /* To this: */
+    min-height: 90vh; /* Sets minimum height to 90% of viewport height */
+    padding: 120px 20px; /* Ensures good spacing even on taller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Add these additional media queries for laptops and larger screens */
+@media (min-width: 1024px) {
+    #hero {
+        min-height: 600px; /* Minimum absolute height for laptops */
+        padding: 150px 20px; /* More padding on larger screens */
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem; /* Larger font for better visibility on laptops */
+    }
+    
+    .hero-content p {
+        font-size: 1.8rem; /* Larger subtitle text */
+        margin-bottom: 40px;
+        
+    }
+    
+    .cta-button {
+        padding: 15px 40px; /* Larger button */
+        font-size: 1.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        color: #5c5a5a;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .secondary-button {
+        display: inline-block;
+        background-color: transparent;
+        color: #4a89dc;
+        border: 2px solid #4a89dc;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .secondary-button:hover {
+        background-color: rgba(74, 137, 220, 0.1);
+    }
+}
+
+/* For very large screens */
+@media (min-width: 1440px) {
+    #hero {
+        min-height: 700px; /* Even taller on very large screens */
+    }
+}
+/* Projects Section */
+#projects {
+    background-color: #f9f9f9;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+}
+
+.skills-container .skill {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #e0e0e0;
+}
+
+/* Skills Section */
+#skills {
+    background-color: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill {
+    background-color: #4a89dc;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #4a89dc;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #3a70b0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #4a89dc;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+/* Mobile menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
